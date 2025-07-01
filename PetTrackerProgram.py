@@ -33,3 +33,16 @@ def rename(self, new_name):
     old_name = self.name
     self.name = new_name
     return f"Name changed from {old_name} to {new_name}."
+
+pets = [pet1, pet2, pet3]
+
+def get_non_adopted_pets(pet_list):
+    non_adopted = []
+    for pet in pet_list:
+        if not pet.adopted:
+            non_adopted.append(pet)
+    return non_adopted
+
+print("\nNon-Adopted Pets:")
+for pet in get_non_adopted_pets(pets):
+    print(pet.display_info())
